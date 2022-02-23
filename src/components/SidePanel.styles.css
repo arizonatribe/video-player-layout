@@ -1,0 +1,23 @@
+.content {
+    display: grid;
+    padding: 0.5em 0;
+    justify-content: center;
+    grid-row-gap: 0.5em;
+}
+
+.content-item {
+    display: block;
+    background-color: #bbb;
+    border-radius: 0.3em;
+}
+
+.content-item img {
+    display: block;
+    border-radius: 0.3em;
+}
+
+.side-panel {
+    grid-area: side;
+    height: 100vh;
+    overflow-y: scroll;
+}

@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { Player, ToggleButton, SidePanel } from "./components";
+import "./App.styles.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [shouldShowPanel, setToggle] = useState(true);
+
+    const handleToggle = () => {
+      setToggle(!shouldShowPanel);
+    }
+
+    const styles = [
+        "app",
+        shouldShowPanel && "app-with-nav"
+    ].filter(Boolean).join(" ")
+
+    return (
+        <div className={styles}>
+            {shouldShowPanel && <SidePanel shouldShowPanel />}
+            <Player/>
+            <ToggleButton handleToggle={handleToggle} />
+        </div>
+    );
 }
 
 export default App;

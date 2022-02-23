@@ -1,0 +1,14 @@
+.app {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    overflow: hidden;
+    grid-template-areas: "player";
+    grid-template-columns: 1fr;
+    transition: all 1s;
+}
+
+.app-with-nav {
+    grid-template-areas: "player side";
+    grid-template-columns: 1fr 320px;
+}
