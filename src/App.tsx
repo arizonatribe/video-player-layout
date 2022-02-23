@@ -16,8 +16,8 @@ function App() {
 
     return (
         <div className={styles}>
-            {shouldShowPanel && <SidePanel shouldShowPanel />}
-            <Player/>
+            {shouldShowPanel && <SidePanel />}
+            <Player />
             <ToggleButton handleToggle={handleToggle} />
         </div>
     );

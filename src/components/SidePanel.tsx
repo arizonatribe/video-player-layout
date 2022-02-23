@@ -1,13 +1,13 @@
 import "./SidePanel.styles.css";
 
 interface Props {
-    shouldShowPanel: boolean
+    collapsed?: boolean
 }
 
-export function SidePanel({ shouldShowPanel }: Props) {
+export function SidePanel({ collapsed }: Props) {
     const styles = [
         "side-panel",
-        shouldShowPanel && "side-panel-visible",
+        collapsed && "side-panel-collapsed",
     ].filter(Boolean).join(" ")
 
     return (
@@ -15,7 +15,7 @@ export function SidePanel({ shouldShowPanel }: Props) {
             <div className="content">
                 {Array.from({ length: 8 }).map(() => (
                     <div className="content-item">
-                        <img src="https://via.placeholder.com/280x150.png?text=Item" />
+                        <img alt="video thumbnail" src="https://via.placeholder.com/280x150.png?text=Item" />
                     </div>
                 ))}
             </div>
