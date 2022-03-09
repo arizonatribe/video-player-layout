@@ -2,6 +2,10 @@
 
 A simple exercise to demonstrate adaptable layouts in React (using CSS) for a Video player with additional video thumbnail images in a sidebar.
 
+Check out the simple [demo](https://arizonatribe.github.io/video-player-layout)
+
+![Demo screenshot](media/screenshot.png)
+
 ## The Toggle Button:
 
 * Position the ‘toggle’ button to display over the player UI at the top left.
